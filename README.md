@@ -3,6 +3,8 @@
 - servlet is a java class, which handles client request, process it and return the response
 - and servlet container are the ones which manages the servlets
 
+![alt text](assets/servlets.png)
+
 Spring framework solve challenges which exists with Servlets
 - Removal of web.xml
     - the web.xml overtime becomes too big and becomes very difficult to manage and understand
@@ -34,3 +36,23 @@ Spring framework solve challenges which exists with Servlets
 
 - Integration with other technologies
     - like hibernate, adding security etc.
+
+## Spring framework
+![alt text](assets/spring_framework.png)
+
+Spring boot solve challenges which exists with Spring MVC
+- Dependency Management: No need for adding different dependencies separately and also their compatible version headache
+- AutoConfiguration: No need for separately configuring "DispatcherServlet", "AppConfig", "EnableWebMvc", "ComponentScan". Springboot add internally by-default
+- Embedded Server: In traditional Spring MVC application, we need to build WAR file which is a packaged file containing application's classes, JSP Pages, configuration files and dependencies. Then we need to deploy this WAR file to servlet container like Tomcat. But in Springboot, Servlet container is already embedded, we don't have to do all this stuff, just run the application that's all.
+
+So what's Springboot?
+- It provides a quick way to create a production ready application.
+- It is based on Spring framework
+- It supports Convention over Configuration
+    - Use default values for configuration and if developer do not want to go with the convention, they can override it.
+- It also helps to run an application as quick as possible
+
+## Layered Architecture
+![alt text](assets/layered_architecture.png)
+
+### DTO(Data Transfer Object)
