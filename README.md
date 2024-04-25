@@ -56,3 +56,19 @@ So what's Springboot?
 ![alt text](assets/layered_architecture.png)
 
 ### DTO(Data Transfer Object)
+- Request DTO
+    - map the data coming from the client to request dto
+    - controller layer takes the responsibility to do the mapping
+- Response DTO
+    - map the data coming from the db/repository to request dto
+    - service layer takes the responsibility to do the mapping
+
+### Utitlity
+Anything common across any layers
+
+### Entity
+- Entity are classes that are direct representation of our tables
+- Used by repository mostly
+
+### Configuration
+- application.properties to define fixed values
