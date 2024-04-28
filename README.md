@@ -72,3 +72,66 @@ Anything common across any layers
 
 ### Configuration
 - application.properties to define fixed values
+
+## Maven
+- Maven is a project management tool which helps developer with:
+- build generation
+- dependency resolution
+- documentation
+
+
+- Maven uses POM(Project Object Model) to achieve this
+- When "maven" command is given, it looks for "pom.xml" in the current directory & gets the needed configuration
+
+Maven commands:
+- mvn install
+- mvn deploy etc.
+
+Ant was previosuly used
+- what to do how to do
+
+maven
+- what to do, how will be taken care by maven
+
+Maven Project Structure<br>
+
+learnspringboot
+- pom.xml
+- src
+    - main
+        - java
+            - com
+                - company_name
+                    - app_name
+                        - Application.java
+    - test
+        - java
+            - com
+                - company_name
+                    - app_name
+                        - ApplicationTest.java
+
+
+
+- schemaLocation: specifies the XML schema, also make sure that our XML adheres to correct structure and version defined by maven
+- Parent: used to define the parent project. Current Project is a child of spring-boot-starter-parent which might be a child of superpom
+    - In maven, each pom.xml is a child of parent pom
+    - If this <parent> field is not specified, maen by-default inherit the configurations from "Super Pom". This is the link of maven Super POM: <a href="https://maven.apache.org/ref/3.0.4/maven-model-builder/super-pom.html">super-pom</a>
+- group id, artifact id: unique identifier of your project
+- properties: key value pair for configurations, and these properties can be used throughout xml file
+- repositories: this is where maven look for project dependencies and download the artifacts(jars)
+    - urls: url from where you want to download the dependencies
+- dependencies: this is where we declare the dependecnies that our project relies on
+- build: 
+
+
+## Maven Lifecycle
+![alt text](assets/maven-lifecycle.png)
+
+- if you want to run "package" all its previous phased will gte executed first
+- and if you want to run specified goal of a particular phase, then all the goals of previous phases + current phase goals before the one you defined will get run
+- if you want to add a specific task in a specific phase, maven provides the flexibility to add it
+
+
+## Adding a new task to a specific phase
+![alt text](assets/maven-new-task.png)
