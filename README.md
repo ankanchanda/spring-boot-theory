@@ -135,3 +135,53 @@ learnspringboot
 
 ## Adding a new task to a specific phase
 ![alt text](assets/maven-new-task.png)
+
+### Compile:
+- mvn compile<br>
+It will validate and compile your code and put it under ${project.basedir}/target/classes
+
+### Test
+- mvn test<br>
+It will validate compile and then run TEST cases in your projects
+
+### Package
+- mvn package<br>
+First complete, validate, compile, test phase, and then run package phase in which it generates .java or .war file
+- puts inside target folder
+
+### Verify
+- mvn verify<br>
+It can perform some additional checks apart from unit tests like:
+- Static Code Analysis:
+    - finds unused variables
+    - finds unused imports
+    - empty catch block
+    - no usage of object
+    - finds duplicate code etc.
+- CheckSum Verification
+
+![Static Code Analysis](assets/static-code-analysis.png)
+
+Static Code Analysis: pmd has all the supports for that
+
+### install
+- mvn install<br>
+install the .jar file in the local maven repository which is typically in your user home directory(windows) or ~/.m2/repository
+- this path can be configured using settings.xml in .m2 folder
+
+![alt text](assets/settings-xml.png)
+
+- while downloading dependencies, it will check the local repository, if it is present, else it will check in the remote repository
+- remote repository can be your organisation remore repo else maven central
+
+### Deploy
+- mvn deploy<br>
+- it will deploy the .jar file to REMOTE repository
+
+![alt text](assets/maven-deploy-pom.png)
+
+![alt text](assets/maven-deploy-setting-xml.png)
+
+Maven Central Repository: <a href="https://repo.maven.apache.org/maven2">https://repo.maven.apache.org/maven2</a>
+
+Since its public, we do not need username and password in setting.xml
