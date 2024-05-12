@@ -185,3 +185,8 @@ install the .jar file in the local maven repository which is typically in your u
 Maven Central Repository: <a href="https://repo.maven.apache.org/maven2">https://repo.maven.apache.org/maven2</a>
 
 Since its public, we do not need username and password in setting.xml
+
+## Annotations
+- Controller Vs Rest Controller
+- initBinder()
+- JsonProperty
